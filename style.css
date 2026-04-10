@@ -502,20 +502,63 @@ h3 { font-size: 1.1rem; color: var(--brass); margin-bottom: 0.5rem; }
 
 /* ── Privacy ──────────────────────────────────────────────────────── */
 .privacy {
-  padding: 40px 24px;
-  background: rgba(0,0,0,0.25);
+  padding: 80px 24px;
+  background: linear-gradient(160deg, rgba(20,10,4,0.85), rgba(40,20,8,0.7));
   border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
 }
 .privacy-inner {
-  max-width: 760px;
+  max-width: 900px;
   margin: 0 auto;
   display: flex;
   align-items: flex-start;
-  gap: 20px;
+  gap: 40px;
 }
-.privacy-icon { font-size: 2rem; flex-shrink: 0; margin-top: 2px; }
-.privacy h3 { color: var(--brass); margin-bottom: 6px; }
-.privacy p { font-size: 0.95rem; color: var(--text); }
+.privacy-icon-wrap {
+  font-size: 4rem;
+  flex-shrink: 0;
+  margin-top: 6px;
+  filter: drop-shadow(0 0 16px rgba(212,175,55,0.5));
+}
+.privacy-body { flex: 1; }
+.privacy-title {
+  font-size: 2.2rem;
+  color: var(--brass);
+  margin-bottom: 16px;
+  text-shadow: 0 0 30px rgba(212,175,55,0.3);
+}
+.privacy-lead {
+  font-size: 1.15rem;
+  color: var(--cream);
+  line-height: 1.7;
+  margin-bottom: 28px;
+}
+.privacy-points {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+.privacy-point {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  background: rgba(212,175,55,0.06);
+  border: 1px solid rgba(212,175,55,0.15);
+  border-radius: 8px;
+  padding: 14px 16px;
+}
+.privacy-point-icon { font-size: 1.3rem; flex-shrink: 0; margin-top: 2px; }
+.privacy-point span:last-child { font-size: 1rem; color: var(--text); line-height: 1.6; }
+.privacy-policy-link {
+  color: var(--brass);
+  text-decoration: none;
+  font-size: 0.95rem;
+  border-bottom: 1px solid rgba(212,175,55,0.3);
+  padding-bottom: 2px;
+  transition: border-color 0.2s;
+}
+.privacy-policy-link:hover { border-color: var(--brass); }
 
 /* ── Footer ───────────────────────────────────────────────────────── */
 footer {
@@ -538,7 +581,8 @@ footer {
   .machine-inner { flex-direction: column; }
   .machine-screenshot { max-width: 100%; }
   .mac-inner { flex-direction: column; }
-  .privacy-inner { flex-direction: column; }
+  .privacy-inner { flex-direction: column; gap: 20px; }
+  .privacy-title { font-size: 1.6rem; }
   .rotors-row-demo { gap: 8px; }
   .feature-grid { grid-template-columns: 1fr; }
   .feature-card { flex-direction: column; }
